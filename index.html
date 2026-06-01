@@ -228,8 +228,8 @@
       align-items: start;
     }
     .cd {
-            width: 300px;
-            height: 300px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background-color: #0e2351;
             position: relative;
@@ -241,8 +241,8 @@
             inset 0 0 0 60px rgba(255,255,255,0.04);
         }
         .cd-hole-outline {
-            width: 100px;
-            height: 100px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background-color: #000000;
             position: absolute;
@@ -251,8 +251,8 @@
             transform: translate(-50%, -50%);
         }
         .cd-hole {
-            width: 40px;
-            height: 40px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background-color: #ffffff;
             position: absolute;
@@ -514,12 +514,16 @@
           <span class="detail-label">Email</span>
           <span class="detail-value"><a href="mailto:jr73326@my.utexas.edu">jr73326@my.utexas.edu</a></span>
         </div>
-        <p style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #bf5700; margin-bottom: 12px; margin-top: 20px;">What I'm listening to</p>
-        <div class="cd spinning" id = "cd">
-            <div class ="cd-hole-outline">
+        <div class="detail-row">
+    <span class="detail-label">What I'm Listening to</span>
+    <span class="detail-value">
+        <div class="cd spinning" id="cd">
+            <div class="cd-hole-outline">
                 <div class="cd-hole"></div>
             </div>
         </div>
+    </span>
+</div>
       </div>
     </div>
   </section>
