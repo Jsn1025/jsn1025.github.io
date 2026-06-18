@@ -38,15 +38,21 @@
 
     /* Custom cursor */
     .cursor {
-      width: 8px; height: 8px;
-      background: var(--accent-light);
-      border-radius: 50%;
-      position: fixed; top: 0; left: 0;
-      pointer-events: none;
-      z-index: 9999;
-      transition: transform 0.15s ease, opacity 0.2s;
-      mix-blend-mode: screen;
-    }
+  width: 22px; height: 14px;
+  background: linear-gradient(
+    to bottom,
+    #EA2839 0%, #EA2839 25%,
+    #1A206D 25%, #1A206D 50%,
+    #FFD500 50%, #FFD500 75%,
+    #00A551 75%, #00A551 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.35), 0 2px 6px rgba(0,0,0,0.4);
+  position: fixed; top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, opacity 0.2s;
+}
     .cursor-ring {
       width: 32px; height: 32px;
       border: 1px solid rgba(191,87,0,0.4);
@@ -607,9 +613,9 @@
     const cursor = document.getElementById('cursor');
     const ring = document.getElementById('cursorRing');
     let mx = 0, my = 0, rx = 0, ry = 0;
-    document.addEventListener('mousemove', e => {
+    document.addEventListener('', e => {
       mx = e.clientX; my = e.clientY;
-      cursor.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+      cursor.style.transform = `translate(${mx - 11}px, ${my - 7}px)`;
     });
     function animateRing() {
       rx += (mx - rx - 16) * 0.12;
